@@ -61,7 +61,7 @@ bot.onText(/\/save_playlist/, (msg) => {
 
 async function get_openai_response(message) {
   try {
-    const response = await axios.post('https://api.openai.com/v1/engines/davinci/completions', {
+    const response = await axios.post('https://api.openai.com/v1/engines/text-davinci-003/completions', {
       prompt: message,
       max_tokens: 150
     }, {
