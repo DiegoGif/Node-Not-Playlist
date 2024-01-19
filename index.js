@@ -9,7 +9,7 @@ const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT_ID,
   clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-  redirectUri: 'http://localhost:3000/callback'
+  redirectUri: 'https://node-not-playlist-production.up.railway.app/callback'
 });
 
 const app = express();
