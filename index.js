@@ -62,7 +62,6 @@ bot.onText(/\/save_playlist/, (msg) => {
 async function get_openai_response(message) {
   try {
     const response = await axios.post('https://api.openai.com/v1/engines/gpt-3.5-turbo-1106/completions', {
-      model: 'gpt-3.5-turbo-1106',
       prompt: message,
       max_tokens: 150,
       temperature: 0.7,
@@ -78,6 +77,7 @@ async function get_openai_response(message) {
     return 'Error in processing your request.';
   }
 }
+
 
 
 async function create_playlist(playlistDetails) {
